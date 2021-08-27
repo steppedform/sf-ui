@@ -1,0 +1,29 @@
+{
+  "name": "@steppedform/ui",
+  "version": "1.0.0",
+  "description": "SteppedForm is the fastest way to build steppers and multi steps forms.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/steppedform/ui.git"
+  },
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/steppedform-ui/steppedform-ui.esm.js",
+  "files": [
+    "dist/",
+    "loader/"
+  ],
+  "scripts": {},
+  "dependencies": {},
+  "license": "GPLv3",
+  "devDependencies": {
+    "@types/jest": "^27.0.1",
+    "jasmine-core": "^3.9.0",
+    "workbox-build": "^4.3.1"
+  }
+}
