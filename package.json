@@ -4,7 +4,7 @@
   "description": "SteppedForm is the fastest way to build steppers and multi steps forms.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/steppedform/ui.git"
+    "url": "https://github.com/steppedform/sf-ui.git"
   },
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
