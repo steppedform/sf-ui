@@ -18,6 +18,9 @@
     "dist/",
     "loader/"
   ],
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
+  },
   "scripts": {},
   "dependencies": {},
   "license": "GPLv3",
