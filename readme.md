@@ -1,13 +1,13 @@
 # SteppedForm
 
-Official repository of `@steppedform/ui`, the fastest way to build steppers and multi steps forms.
+Official repository of `@steppedform/sf-ui`, the fastest way to build steppers and multi steps forms.
 
 ## Getting Started
 
 To start using a new component using SteppedForm, run npm install in your JS project:
 
 ```bash
-npm i @steppedform/ui
+npm i @steppedform/sf-ui
 ```
 
 ## License

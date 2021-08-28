@@ -1,6 +1,6 @@
 {
-  "name": "@steppedform/ui",
-  "version": "1.0.9",
+  "name": "@steppedform/sf-ui",
+  "version": "1.0.0",
   "description": "SteppedForm is the fastest way to build steppers and multi steps forms.",
   "repository": {
     "type": "git",
