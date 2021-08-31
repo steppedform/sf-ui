@@ -1,6 +1,6 @@
 import { Component, h, Prop, State, Watch, Listen, Event, Element } from '@stencil/core';
 import { valService } from '../../services/validation-service';
-import { licProcess } from '../../license.worker';
+import { licService } from '../../services/license-service';
 export class SfFullCreditCard {
   constructor() {
     this.inputsChecked = [];
@@ -27,7 +27,7 @@ export class SfFullCreditCard {
   async onLicenseChecked(event) {
     this.licChecked = event.detail;
     if (!this.licChecked) {
-      const innerLic = await licProcess(this.lic);
+      const innerLic = await licService.licProcess(this.lic);
       if (innerLic) {
         this.licChecked = true;
       }

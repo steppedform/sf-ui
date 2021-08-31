@@ -1,5 +1,5 @@
 import { Component, h, Prop, State, Watch, Element, Method, Event, Listen } from '@stencil/core';
-import { licProcess } from '../../license.worker';
+import { licService } from '../../services/license-service';
 export class SfStepper {
   /**
   * Used when steper is clicked (update)
@@ -59,7 +59,7 @@ export class SfStepper {
   }
   async componentWillLoad() {
     this.onStepInit();
-    const result = await licProcess(this.lic);
+    const result = await licService.licProcess(this.lic);
     this.licenseChecked.emit(result);
   }
   componentDidLoad() {

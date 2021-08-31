@@ -1,6 +1,6 @@
 import { Component, h, getAssetPath, Prop, State, Listen, Watch, Event } from '@stencil/core';
 import { valService } from '../../services/validation-service';
-import { licProcess } from '../../license.worker';
+import { licService } from '../../services/license-service';
 export class SfInput {
   constructor() {
     this.cardDateMax = 5;
@@ -72,7 +72,7 @@ Listenting lic from any other wc
   async onLicenseChecked(event) {
     this.licChecked = event.detail;
     if (!this.licChecked) {
-      const innerLic = await licProcess(this.lic);
+      const innerLic = await licService.licProcess(this.lic);
       if (innerLic) {
         this.licChecked = true;
       }
