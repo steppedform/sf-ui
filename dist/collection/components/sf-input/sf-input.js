@@ -8,9 +8,9 @@ export class SfInput {
     this.cardNumberMax = 19;
     this.addressZipMax = 5;
     /* Datasets for Autocomplete */
-    this.statesUrl = getAssetPath(`./global-data/states.json`);
-    this.countriesUrl = getAssetPath(`./global-data/countries.json`);
-    this.citiesUrl = getAssetPath(`./global-data/cities.json`);
+    this.statesUrl = getAssetPath(`./assets/places-data/states.json`);
+    this.countriesUrl = getAssetPath(`./assets/places-data/countries.json`);
+    this.citiesUrl = getAssetPath(`./assets/places-data/cities.json`);
     /* CC Icons Images */
     this.visaImg = 'visa.svg';
     this.amexImg = 'amex.svg';
@@ -167,7 +167,7 @@ Listenting lic from any other wc
       sfExpressions: 'this.role == 'admin' && this.addressInputs[mame]'
       'class' are **** ALL optional *****
     */
-    this.cardImage = (this.creditCardType === 'visa') ? getAssetPath(`./assets-js/${this.visaImg}`) : (this.creditCardType === 'amex') ? getAssetPath(`./assets-js/${this.amexImg}`) : (this.creditCardType == 'mastercard') ? getAssetPath(`./assets-js/${this.mastercardImg}`) : (this.creditCardType === 'discoverImg') ? getAssetPath(`./assets-js/${this.discoverImg}`) : (this.creditCardType === 'dinners') ? getAssetPath(`./assets-js/${this.dinnersImg}`) : (this.creditCardType == 'jcb') ? getAssetPath(`./assets-js/${this.jcbImg}`) : (this.creditCardType === 'unionpay') ? getAssetPath(`./assets-js/${this.unionImg}`) : null;
+    this.cardImage = (this.creditCardType === 'visa') ? getAssetPath(`./assets/${this.visaImg}`) : (this.creditCardType === 'amex') ? getAssetPath(`./assets/${this.amexImg}`) : (this.creditCardType == 'mastercard') ? getAssetPath(`./assets/${this.mastercardImg}`) : (this.creditCardType === 'discoverImg') ? getAssetPath(`./assets/${this.discoverImg}`) : (this.creditCardType === 'dinners') ? getAssetPath(`./assets/${this.dinnersImg}`) : (this.creditCardType == 'jcb') ? getAssetPath(`./assets/${this.jcbImg}`) : (this.creditCardType === 'unionpay') ? getAssetPath(`./assets/${this.unionImg}`) : null;
     if (this.cardImage) {
       this.inputBackground = {
         backgroundImage: `url(${this.cardImage})`,
@@ -192,7 +192,7 @@ Listenting lic from any other wc
   static get styleUrls() { return {
     "$": ["sf-input.css"]
   }; }
-  static get assetsDirs() { return ["global-data", "assets-js"]; }
+  static get assetsDirs() { return ["assets"]; }
   static get properties() { return {
     "statesUrl": {
       "type": "string",
@@ -210,7 +210,7 @@ Listenting lic from any other wc
       },
       "attribute": "states-url",
       "reflect": false,
-      "defaultValue": "getAssetPath(`./global-data/states.json`)"
+      "defaultValue": "getAssetPath(`./assets/places-data/states.json`)"
     },
     "countriesUrl": {
       "type": "string",
@@ -228,7 +228,7 @@ Listenting lic from any other wc
       },
       "attribute": "countries-url",
       "reflect": false,
-      "defaultValue": "getAssetPath(`./global-data/countries.json`)"
+      "defaultValue": "getAssetPath(`./assets/places-data/countries.json`)"
     },
     "citiesUrl": {
       "type": "string",
@@ -246,7 +246,7 @@ Listenting lic from any other wc
       },
       "attribute": "cities-url",
       "reflect": false,
-      "defaultValue": "getAssetPath(`./global-data/cities.json`)"
+      "defaultValue": "getAssetPath(`./assets/places-data/cities.json`)"
     },
     "visaImg": {
       "type": "string",

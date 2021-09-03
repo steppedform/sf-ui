@@ -58,9 +58,9 @@ const SfCardImage = class {
     this.image = (this.image) ? this.image : this.image = 'new-balance.png';
   }
   render() {
-    return index.h("img", { src: index.getAssetPath(`./assets-js/${this.image}`), class: "card-image" });
+    return index.h("img", { src: index.getAssetPath(`./assets/${this.image}`), class: "card-image" });
   }
-  static get assetsDirs() { return ["assets-js"]; }
+  static get assetsDirs() { return ["assets"]; }
 };
 SfCardImage.style = sfCardImageCss;
 
@@ -500,9 +500,9 @@ const SfInput = class {
     this.cardNumberMax = 19;
     this.addressZipMax = 5;
     /* Datasets for Autocomplete */
-    this.statesUrl = index.getAssetPath(`./global-data/states.json`);
-    this.countriesUrl = index.getAssetPath(`./global-data/countries.json`);
-    this.citiesUrl = index.getAssetPath(`./global-data/cities.json`);
+    this.statesUrl = index.getAssetPath(`./assets/places-data/states.json`);
+    this.countriesUrl = index.getAssetPath(`./assets/places-data/countries.json`);
+    this.citiesUrl = index.getAssetPath(`./assets/places-data/cities.json`);
     /* CC Icons Images */
     this.visaImg = 'visa.svg';
     this.amexImg = 'amex.svg';
@@ -659,7 +659,7 @@ Listenting lic from any other wc
       sfExpressions: 'this.role == 'admin' && this.addressInputs[mame]'
       'class' are **** ALL optional *****
     */
-    this.cardImage = (this.creditCardType === 'visa') ? index.getAssetPath(`./assets-js/${this.visaImg}`) : (this.creditCardType === 'amex') ? index.getAssetPath(`./assets-js/${this.amexImg}`) : (this.creditCardType == 'mastercard') ? index.getAssetPath(`./assets-js/${this.mastercardImg}`) : (this.creditCardType === 'discoverImg') ? index.getAssetPath(`./assets-js/${this.discoverImg}`) : (this.creditCardType === 'dinners') ? index.getAssetPath(`./assets-js/${this.dinnersImg}`) : (this.creditCardType == 'jcb') ? index.getAssetPath(`./assets-js/${this.jcbImg}`) : (this.creditCardType === 'unionpay') ? index.getAssetPath(`./assets-js/${this.unionImg}`) : null;
+    this.cardImage = (this.creditCardType === 'visa') ? index.getAssetPath(`./assets/${this.visaImg}`) : (this.creditCardType === 'amex') ? index.getAssetPath(`./assets/${this.amexImg}`) : (this.creditCardType == 'mastercard') ? index.getAssetPath(`./assets/${this.mastercardImg}`) : (this.creditCardType === 'discoverImg') ? index.getAssetPath(`./assets/${this.discoverImg}`) : (this.creditCardType === 'dinners') ? index.getAssetPath(`./assets/${this.dinnersImg}`) : (this.creditCardType == 'jcb') ? index.getAssetPath(`./assets/${this.jcbImg}`) : (this.creditCardType === 'unionpay') ? index.getAssetPath(`./assets/${this.unionImg}`) : null;
     if (this.cardImage) {
       this.inputBackground = {
         backgroundImage: `url(${this.cardImage})`,
@@ -672,7 +672,7 @@ Listenting lic from any other wc
       index.h("div", { class: "sf-form__group" }, index.h("input", { type: this.innerType, style: (this.inputBackground) ? this.inputBackground : '', class: this.innerInputValid ? 'sf-form__input' : 'sf-form__input sf-form__input-error', placeholder: this.sfLabel, ref: el => (this.innerInput = el), value: this.innerTextInput, maxlength: (this.sfData === 'card-number') ? this.cardNumberMax : (this.sfData === 'card-cvc') ? this.cardCvcMax : (this.sfData === 'card-date') ? this.cardDateMax : (this.sfData === 'zipcode') ? this.addressZipMax : '', onInput: this.onTextInput.bind(this), name: this.sfId, id: this.sfId, required: this.sfRequired, disabled: this.sfDisabled }), index.h("label", { htmlFor: this.sfId, class: "sf-form__label" }, this.sfLabel), (this.sfData === 'statesList' && !this.emptyList && this.innerType === 'text') ? index.h("div", { class: "sf-form__group__data-list", id: "sf-suggest-states", innerHTML: this.statesList }) : (this.sfData === 'countriesList' && !this.emptyList && this.innerType === 'text') ? index.h("div", { class: "sf-form__group__data-list", id: "sf-suggest-countries", innerHTML: this.countriesList }) : (this.sfData === 'citiesList' && !this.emptyList && this.innerType === 'text') ? index.h("div", { class: "sf-form__group__data-list", id: "sf-suggest-cities", innerHTML: this.citiesList }) : '', index.h("div", { class: "sf-form__group__error" }, (!this.innerInputValid && this.sfError) ? this.sfError : ''));
     return (this.currentRender);
   }
-  static get assetsDirs() { return ["global-data", "assets-js"]; }
+  static get assetsDirs() { return ["assets"]; }
   static get watchers() { return {
     "sfData": ["onSearchAddress"]
   }; }
