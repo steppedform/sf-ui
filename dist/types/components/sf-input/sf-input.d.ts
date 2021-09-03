@@ -43,7 +43,7 @@ export declare class SfInput {
   inputValidated: EventEmitter<boolean>;
   onHandleClickEvent(ev: any): void;
   onLicenseChecked(event: CustomEvent): Promise<void>;
-  onSearchAddress(dataInput: any): void;
+  onSearchAddress(dataInput: any): Promise<void>;
   onTextInput(event: Event): void;
   onZipCode(): boolean;
   onCardCvc(): boolean;

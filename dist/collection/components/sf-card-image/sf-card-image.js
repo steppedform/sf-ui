@@ -4,7 +4,7 @@ export class SfCardImage {
     this.image = (this.image) ? this.image : this.image = 'new-balance.png';
   }
   render() {
-    return h("img", { src: getAssetPath(`./assets/${this.image}`), class: "card-image" });
+    return h("img", { src: getAssetPath(`./assets-js/${this.image}`), class: "card-image" });
   }
   static get is() { return "sf-card-image"; }
   static get encapsulation() { return "shadow"; }
@@ -14,7 +14,7 @@ export class SfCardImage {
   static get styleUrls() { return {
     "$": ["sf-card-image.css"]
   }; }
-  static get assetsDirs() { return ["assets"]; }
+  static get assetsDirs() { return ["assets-js"]; }
   static get properties() { return {
     "image": {
       "type": "string",

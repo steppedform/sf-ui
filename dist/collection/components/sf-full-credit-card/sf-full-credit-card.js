@@ -250,7 +250,7 @@ export class SfFullCreditCard {
   static get listeners() { return [{
       "name": "radioValueSelected",
       "method": "onRadioValueSelected",
-      "target": "body",
+      "target": undefined,
       "capture": false,
       "passive": false
     }, {

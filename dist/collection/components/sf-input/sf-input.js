@@ -8,9 +8,9 @@ export class SfInput {
     this.cardNumberMax = 19;
     this.addressZipMax = 5;
     /* Datasets for Autocomplete */
-    this.statesUrl = getAssetPath(`../global-data/states.json`);
-    this.countriesUrl = getAssetPath(`../global-data/countries.json`);
-    this.citiesUrl = getAssetPath(`../global-data/cities.json`);
+    this.statesUrl = getAssetPath(`./global-data/states.json`);
+    this.countriesUrl = getAssetPath(`./global-data/countries.json`);
+    this.citiesUrl = getAssetPath(`./global-data/cities.json`);
     /* CC Icons Images */
     this.visaImg = 'visa.svg';
     this.amexImg = 'amex.svg';
@@ -78,7 +78,7 @@ Listenting lic from any other wc
       }
     }
   }
-  onSearchAddress(dataInput) {
+  async onSearchAddress(dataInput) {
     if (this.sfData === 'zipcode' && this.innerType === 'text') {
       this.innerInputValid = this.onZipCode();
     }
@@ -92,13 +92,13 @@ Listenting lic from any other wc
       this.innerInputValid = this.onCardNumber();
     }
     else if (this.sfData === 'statesList' && this.innerType === 'text') {
-      this.onSearchSuggestions(dataInput, this.statesUrl);
+      await this.onSearchSuggestions(dataInput, this.statesUrl);
     }
     else if (this.sfData === 'countriesList' && this.innerType === 'text') {
-      this.onSearchSuggestions(dataInput, this.countriesUrl);
+      await this.onSearchSuggestions(dataInput, this.countriesUrl);
     }
     else if (this.sfData === 'citiesList' && this.innerType === 'text') {
-      this.onSearchSuggestions(dataInput, this.citiesUrl);
+      await this.onSearchSuggestions(dataInput, this.citiesUrl);
     }
     else {
       this.innerInputValid = true;
@@ -122,7 +122,6 @@ Listenting lic from any other wc
       this.innerInputValid = false;
     }
     (this.innerInputValid && this.innerTextInput.length) ? this.inputValidated.emit(true) : this.inputValidated.emit(false);
-    //console.log('innerInputValid-->', this.innerInputValid);
   }
   onZipCode() {
     const fetchInputChanges = valService.isValidUSZip(this.innerTextInput);
@@ -168,7 +167,7 @@ Listenting lic from any other wc
       sfExpressions: 'this.role == 'admin' && this.addressInputs[mame]'
       'class' are **** ALL optional *****
     */
-    this.cardImage = (this.creditCardType === 'visa') ? getAssetPath(`./assets/${this.visaImg}`) : (this.creditCardType === 'amex') ? getAssetPath(`./assets/${this.amexImg}`) : (this.creditCardType == 'mastercard') ? getAssetPath(`./assets/${this.mastercardImg}`) : (this.creditCardType === 'discoverImg') ? getAssetPath(`./assets/${this.discoverImg}`) : (this.creditCardType === 'dinners') ? getAssetPath(`./assets/${this.dinnersImg}`) : (this.creditCardType == 'jcb') ? getAssetPath(`./assets/${this.jcbImg}`) : (this.creditCardType === 'unionpay') ? getAssetPath(`./assets/${this.unionImg}`) : null;
+    this.cardImage = (this.creditCardType === 'visa') ? getAssetPath(`./assets-js/${this.visaImg}`) : (this.creditCardType === 'amex') ? getAssetPath(`./assets-js/${this.amexImg}`) : (this.creditCardType == 'mastercard') ? getAssetPath(`./assets-js/${this.mastercardImg}`) : (this.creditCardType === 'discoverImg') ? getAssetPath(`./assets-js/${this.discoverImg}`) : (this.creditCardType === 'dinners') ? getAssetPath(`./assets-js/${this.dinnersImg}`) : (this.creditCardType == 'jcb') ? getAssetPath(`./assets-js/${this.jcbImg}`) : (this.creditCardType === 'unionpay') ? getAssetPath(`./assets-js/${this.unionImg}`) : null;
     if (this.cardImage) {
       this.inputBackground = {
         backgroundImage: `url(${this.cardImage})`,
@@ -193,7 +192,7 @@ Listenting lic from any other wc
   static get styleUrls() { return {
     "$": ["sf-input.css"]
   }; }
-  static get assetsDirs() { return ["../global-data", "assets"]; }
+  static get assetsDirs() { return ["global-data", "assets-js"]; }
   static get properties() { return {
     "statesUrl": {
       "type": "string",
@@ -211,7 +210,7 @@ Listenting lic from any other wc
       },
       "attribute": "states-url",
       "reflect": false,
-      "defaultValue": "getAssetPath(`../global-data/states.json`)"
+      "defaultValue": "getAssetPath(`./global-data/states.json`)"
     },
     "countriesUrl": {
       "type": "string",
@@ -229,7 +228,7 @@ Listenting lic from any other wc
       },
       "attribute": "countries-url",
       "reflect": false,
-      "defaultValue": "getAssetPath(`../global-data/countries.json`)"
+      "defaultValue": "getAssetPath(`./global-data/countries.json`)"
     },
     "citiesUrl": {
       "type": "string",
@@ -247,7 +246,7 @@ Listenting lic from any other wc
       },
       "attribute": "cities-url",
       "reflect": false,
-      "defaultValue": "getAssetPath(`../global-data/cities.json`)"
+      "defaultValue": "getAssetPath(`./global-data/cities.json`)"
     },
     "visaImg": {
       "type": "string",
@@ -543,7 +542,7 @@ Listenting lic from any other wc
   static get listeners() { return [{
       "name": "click",
       "method": "onHandleClickEvent",
-      "target": "body",
+      "target": undefined,
       "capture": false,
       "passive": false
     }, {
