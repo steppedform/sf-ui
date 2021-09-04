@@ -10,6 +10,12 @@ To start using a new component using SteppedForm, run npm install in your JS pro
 npm i @steppedform/sf-ui
 ```
 
+To switch theme define `data-theme` in `body` (current options are `dark` and `light`):
+
+```bash
+<body data-theme="light"> 
+```
+
 ## License
 
 ### Commercial license
