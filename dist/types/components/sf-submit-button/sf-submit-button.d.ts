@@ -3,5 +3,6 @@ export declare class SfSubmitButton {
   btnStyle: string;
   idSuffix: string;
   sfDisabled: boolean;
+  componentWillLoad(): Promise<void>;
   render(): any;
 }

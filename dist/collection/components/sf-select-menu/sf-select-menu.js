@@ -1,4 +1,5 @@
 import { Component, Prop, h, State, Watch, Event } from '@stencil/core';
+import { themeSer } from '../../services/theme-service';
 export class SfSelectMenu {
   /**
   * Used at init (beginning)
@@ -9,6 +10,7 @@ export class SfSelectMenu {
   }
   componentWillLoad() {
     this.onSelectMenuInit();
+    themeSer.checkTheme();
   }
   onSelectOption(event) {
     const selectOptionValue = event.target.value;

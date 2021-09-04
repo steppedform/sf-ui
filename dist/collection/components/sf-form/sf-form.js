@@ -1,5 +1,9 @@
 import { Component, h } from '@stencil/core';
+import { themeSer } from '../../services/theme-service';
 export class SfForm {
+  async componentWillLoad() {
+    themeSer.checkTheme();
+  }
   render() {
     return (h("div", { class: "sf-book__form" },
       h("form", { action: "#", class: "sf-form" },

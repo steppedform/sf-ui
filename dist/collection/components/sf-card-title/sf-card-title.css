@@ -1,3 +1,34 @@
+/* $theme-map-light: (
+    $theme-primary: #ED0D6D,
+    $theme-secondary: #0101FD,
+    $theme-overlight: #316CFD,
+    $theme-text: #35363a,
+    $theme-shadow: #000000,
+    $theme-contrast: #FFFFFF,
+    $theme-datalist: #FFFFFF,
+    $theme-element: #2E3092,
+    $theme-error: #ed0d2b,
+    $theme-accepted: #0ded32,
+    $theme-next: #d5d5d5,
+    $theme-done: #27ae60,
+    $theme-background: #FFFFFF,
+);
+
+$theme-map-dark: (
+    $theme-primary: #0101FD,
+    $theme-secondary: #ED0D6D,
+    $theme-overlight: #316CFD, 
+    $theme-text: #35363a,
+    $theme-shadow: #FFFFFF,
+    $theme-contrast: #cccccc,
+    $theme-datalist: #464646,
+    $theme-element: #d5d5d5,
+    $theme-error: #ed0d2b,
+    $theme-accepted: #0ded32,
+    $theme-next: #d5d5d5,
+    $theme-done: #27ae60,
+    $theme-background: #000000,
+); */
 *,
 *::after,
 *::before {
@@ -27,17 +58,51 @@
   }
 }
 
+:host-context(body[data-theme=light]) {
+  --theme-primary: #0101FD;
+  --theme-secondary: #ED0D6D;
+  --theme-overlight: #316CFD;
+  --theme-text: #676767;
+  --theme-shadow: #dddddd;
+  --theme-contrast: #f2f2f2;
+  --theme-datalist: #464646;
+  --theme-element: #464646;
+  --theme-error: #ed0d2b;
+  --theme-accepted: #0ded32;
+  --theme-next: #d5d5d5;
+  --theme-done: #27ae60;
+  --theme-background: #ffffff;
+  --theme-font: #000000;
+}
+
+:host-context(body[data-theme=dark]) {
+  --theme-primary: #0101FD;
+  --theme-secondary: #ED0D6D;
+  --theme-overlight: #316CFD;
+  --theme-text: #35363a;
+  --theme-shadow: #FFFFFF;
+  --theme-contrast: #cccccc;
+  --theme-datalist: #464646;
+  --theme-element: #d5d5d5;
+  --theme-error: #ed0d2b;
+  --theme-accepted: #0ded32;
+  --theme-next: #d5d5d5;
+  --theme-done: #27ae60;
+  --theme-background: #000000;
+  --theme-font: #ffffff;
+}
+
 input::-webkit-calendar-picker-indicator {
   display: none;
 }
 
 button:disabled, button[disabled] {
-  background-color: #d5d5d5;
+  background-color: var(--theme-next);
   pointer-events: none;
 }
 
 :host(.error) {
-  border-color: #ed0d2b;
+  border-color: var(--theme-error);
 }
 
 .sf-row {
@@ -86,12 +151,12 @@ button:disabled, button[disabled] {
   margin-top: calc(0.5rem/2);
   width: 100%;
   padding: 0.5rem;
-  border: 0 solid #ED0D6D;
+  border: 0 solid var(--theme-secondary);
 }
 .sf-row .sf-col-1-of-2 {
   width: calc((100% - 0.5rem) / 2);
   padding: 0.5rem;
-  border: 0 solid #ED0D6D;
+  border: 0 solid var(--theme-secondary);
 }
 @media only screen and (max-width: 56.25em) {
   .sf-row .sf-col-1-of-2__back-btn {
@@ -101,27 +166,27 @@ button:disabled, button[disabled] {
 .sf-row .sf-col-1-of-3 {
   width: calc((100% - 2 * 0.5rem) / 3);
   padding: 0.5rem;
-  border: 0 solid #ED0D6D;
+  border: 0 solid var(--theme-secondary);
 }
 .sf-row .sf-col-2-of-3 {
   width: calc(2 * ((100% - 2 * 0.5rem) / 3) + 0.5rem);
   padding: 0.5rem;
-  border: 0 solid #ED0D6D;
+  border: 0 solid var(--theme-secondary);
 }
 .sf-row .sf-col-1-of-4 {
   width: calc((100% - 3 * 0.5rem) / 4);
   padding: 0.5rem;
-  border: 0 solid #ED0D6D;
+  border: 0 solid var(--theme-secondary);
 }
 .sf-row .sf-col-2-of-4 {
   width: calc(2 * ((100% - 3 * 0.5rem) / 4) + 0.5rem);
   padding: 0.5rem;
-  border: 0 solid #ED0D6D;
+  border: 0 solid var(--theme-secondary);
 }
 .sf-row .sf-col-3-of-4 {
   width: calc(3 * ((100% - 3 * 0.5rem) / 4) + 2 * 0.5rem);
   padding: 0.5rem;
-  border: 0 solid #ED0D6D;
+  border: 0 solid var(--theme-secondary);
 }
 .sf-row .sf-steps-col {
   padding: 0;
@@ -149,7 +214,7 @@ button:disabled, button[disabled] {
 .sf-form__group__data-list ul {
   position: absolute;
   display: block;
-  background: #464646;
+  background: var(--theme-datalist);
   z-index: 2000;
   width: 18rem;
   margin: 0;
@@ -161,18 +226,18 @@ button:disabled, button[disabled] {
   padding: 8px;
   font-size: 1rem;
   font-weight: 300;
-  color: #FFFFFF;
+  color: var(--theme-shadow);
   cursor: pointer;
   transition: all 0.5s;
 }
 .sf-form__group__data-list li:hover {
   cursor: pointer;
-  color: #cccccc;
-  background-color: #316CFD;
+  color: var(--theme-contrast);
+  background-color: var(--theme-overlight);
 }
 .sf-form__group__data-list li.selected {
-  color: #cccccc;
-  background-color: #0101FD;
+  color: var(--theme-contrast);
+  background-color: var(--theme-primary);
 }
 .sf-form__group__data-list ul {
   -moz-animation: cssAnimation 0s ease-in 3s forwards;
@@ -206,17 +271,17 @@ button:disabled, button[disabled] {
   }
 }
 .sf-form__input-error {
-  border-bottom: 2px solid #ed0d2b !important;
+  border-bottom: 2px solid var(--theme-error) !important;
 }
 .sf-form__input {
   font-size: 1.2rem;
   font-family: inherit;
-  color: #35363a;
+  color: var(--theme-text);
   padding: 0.5rem 1rem;
   border-radius: 2px;
-  background-color: rbga(#FFFFFF, 0.5);
+  background-color: var(--theme-shadow);
   border: none;
-  border-bottom: 2px solid #35363a;
+  border-bottom: 2px solid var(--theme-text);
   width: 100%;
   display: block;
   transition: all 0.3s;
@@ -229,14 +294,14 @@ button:disabled, button[disabled] {
 }
 .sf-form__input:focus {
   outline: none;
-  box-shadow: 0 1rem 2rem rgba(255, 255, 255, 0.1);
-  border-bottom: 2px solid #27ae60;
+  box-shadow: 0 1rem 2rem rgba(var(--theme-shadow), 0.1);
+  border-bottom: 2px solid var(--theme-done);
 }
 .sf-form__input:focus:required:invalid {
-  border-bottom: 2px solid #ed0d2b;
+  border-bottom: 2px solid var(--theme-error);
 }
 .sf-form__input::-webkit-input-placeholder {
-  color: #35363a;
+  color: var(--theme-text);
 }
 .sf-form__label {
   font-size: 1rem;
@@ -251,7 +316,7 @@ button:disabled, button[disabled] {
   opacity: 0;
   visibility: hidden;
   transform: translateY(2rem);
-  background-color: #cccccc;
+  background-color: var(--theme-contrast);
 }
 .sf-form__radio-group {
   display: block;
@@ -282,7 +347,7 @@ button:disabled, button[disabled] {
 .sf-form__radio-button {
   height: 2rem;
   width: 2rem;
-  border: 2px solid #ED0D6D;
+  border: 2px solid var(--theme-secondary);
   border-radius: 50%;
   display: inline-block;
   position: absolute;
@@ -298,7 +363,7 @@ button:disabled, button[disabled] {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #ED0D6D;
+  background-color: var(--theme-secondary);
   opacity: 0;
   transition: opacity 0.2s;
 }
@@ -309,7 +374,7 @@ button:disabled, button[disabled] {
   margin: 0.5rem 0 0 0;
   padding: 0.25rem 0;
   font-size: 0.8rem;
-  color: #d5d5d5;
+  color: var(--theme-element);
 }
 .sf-form__radio-sub-title {
   padding: 0.25rem 0 0.5rem 0;

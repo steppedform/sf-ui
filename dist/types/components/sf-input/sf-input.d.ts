@@ -44,6 +44,7 @@ export declare class SfInput {
   onHandleClickEvent(ev: any): void;
   onLicenseChecked(event: CustomEvent): Promise<void>;
   onSearchAddress(dataInput: any): Promise<void>;
+  componentWillLoad(): Promise<void>;
   onTextInput(event: Event): void;
   onZipCode(): boolean;
   onCardCvc(): boolean;

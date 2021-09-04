@@ -1,5 +1,6 @@
 import { Component, h, Prop, State, Watch, Element, Method, Event, Listen } from '@stencil/core';
 import { licService } from '../../services/license-service';
+import { themeSer } from '../../services/theme-service';
 export class SfStepper {
   /**
   * Used when steper is clicked (update)
@@ -60,6 +61,7 @@ export class SfStepper {
   async componentWillLoad() {
     this.onStepInit();
     const result = await licService.licProcess(this.lic);
+    themeSer.checkTheme();
     this.licenseChecked.emit(result);
   }
   componentDidLoad() {

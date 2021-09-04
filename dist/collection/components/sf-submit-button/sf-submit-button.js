@@ -1,5 +1,9 @@
 import { Component, h, Prop } from '@stencil/core';
+import { themeSer } from '../../services/theme-service';
 export class SfSubmitButton {
+  async componentWillLoad() {
+    themeSer.checkTheme();
+  }
   render() {
     this.eleId = (this.idSuffix) ? this.idSuffix : '001';
     return (h("button", { disabled: this.sfDisabled, class: (this.btnStyle == 'primary' ? 'sf-btn sf-btn__primary' : 'sf-btn sf-btn__continue'), id: `submit-button-${this.eleId}` },

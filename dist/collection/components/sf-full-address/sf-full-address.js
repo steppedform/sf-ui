@@ -1,6 +1,7 @@
 import { Component, h, Prop, Event, State, Element, Method, Watch, Listen } from '@stencil/core';
 import { valService } from '../../services/validation-service';
 import { licService } from '../../services/license-service';
+import { themeSer } from '../../services/theme-service';
 export class SfFullAddress {
   constructor() {
     this.inputsChecked = [];
@@ -31,6 +32,7 @@ export class SfFullAddress {
   }
   componentWillLoad() {
     this.onAddressInit();
+    themeSer.checkTheme();
   }
   componentDidLoad() {
     this.addressForm = this.inputsArray.shadowRoot.querySelectorAll('sf-input');

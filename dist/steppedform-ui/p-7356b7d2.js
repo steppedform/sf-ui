@@ -1,0 +1,1 @@
+const t=new class{constructor(){this.checkTheme=async()=>{const t=await document.body.getAttribute("data-theme");(!t||t&&"dark"!==t&&"light"!==t&&"custom"!==t)&&await document.body.setAttribute("data-theme","light")}}};export{t}

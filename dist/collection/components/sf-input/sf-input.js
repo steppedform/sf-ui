@@ -1,6 +1,7 @@
 import { Component, h, getAssetPath, Prop, State, Listen, Watch, Event } from '@stencil/core';
 import { valService } from '../../services/validation-service';
 import { licService } from '../../services/license-service';
+import { themeSer } from '../../services/theme-service';
 export class SfInput {
   constructor() {
     this.cardDateMax = 5;
@@ -103,6 +104,9 @@ Listenting lic from any other wc
     else {
       this.innerInputValid = true;
     }
+  }
+  async componentWillLoad() {
+    themeSer.checkTheme();
   }
   onTextInput(event) {
     const inputValue = event.target.value;

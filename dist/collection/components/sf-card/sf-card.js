@@ -1,5 +1,9 @@
 import { Component, h, Prop } from '@stencil/core';
+import { themeSer } from '../../services/theme-service';
 export class SfCard {
+  async componentWillLoad() {
+    themeSer.checkTheme();
+  }
   render() {
     const oneCol = h("div", { class: "sf-row" },
       h("div", { class: (this.center) ? 'sf-col-1-of-1 sf-row__center' : 'sf-col-1-of-1' },

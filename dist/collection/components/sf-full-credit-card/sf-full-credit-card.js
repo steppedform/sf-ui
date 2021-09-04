@@ -1,6 +1,7 @@
 import { Component, h, Prop, State, Watch, Listen, Event, Element } from '@stencil/core';
 import { valService } from '../../services/validation-service';
 import { licService } from '../../services/license-service';
+import { themeSer } from '../../services/theme-service';
 export class SfFullCreditCard {
   constructor() {
     this.inputsChecked = [];
@@ -44,6 +45,7 @@ export class SfFullCreditCard {
   }
   componentWillLoad() {
     this.onCreditCardInit();
+    themeSer.checkTheme();
   }
   componentDidLoad() {
     this.creditCardForm = this.inputsArray.shadowRoot.querySelectorAll('sf-input');

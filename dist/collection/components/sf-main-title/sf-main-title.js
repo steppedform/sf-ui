@@ -1,5 +1,9 @@
 import { Component, h } from '@stencil/core';
+import { themeSer } from '../../services/theme-service';
 export class SfMainTitle {
+  async componentWillLoad() {
+    themeSer.checkTheme();
+  }
   render() {
     return h("h1", { class: "sf-main-title" },
       h("slot", null));

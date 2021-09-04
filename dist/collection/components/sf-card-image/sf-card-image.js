@@ -1,7 +1,9 @@
 import { Component, Prop, getAssetPath, h } from '@stencil/core';
+import { themeSer } from '../../services/theme-service';
 export class SfCardImage {
   componentWillLoad() {
     this.image = (this.image) ? this.image : this.image = 'new-balance.png';
+    themeSer.checkTheme();
   }
   render() {
     return h("img", { src: getAssetPath(`./assets/${this.image}`), class: "card-image" });

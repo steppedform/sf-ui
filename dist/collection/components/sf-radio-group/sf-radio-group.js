@@ -1,4 +1,5 @@
 import { Component, h, Prop, Watch, State, Event } from '@stencil/core';
+import { themeSer } from '../../services/theme-service';
 export class SfRadioGroup {
   onTextInput(event) {
     const radioGroupValue = event.target.value;
@@ -13,6 +14,7 @@ export class SfRadioGroup {
   componentWillLoad() {
     this.onRadioGroupInit();
     this.radioValueSelected.emit(this.radioGroupData[0].radioName);
+    themeSer.checkTheme();
   }
   render() {
     return (h("div", { class: "sf-form__group" }, this.innerRadioGroupData.map((radio, index) => h("div", { class: "sf-form__radio-group" },
