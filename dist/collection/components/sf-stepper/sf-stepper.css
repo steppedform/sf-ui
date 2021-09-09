@@ -38,23 +38,18 @@ $theme-map-dark: (
 }
 
 :host {
-  font-size: 62.5%;
+  font-size: 100%;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
 @media only screen and (max-width: 75em) {
   :host {
-    font-size: 56.25%;
+    font-size: 85%;
   }
 }
 @media only screen and (max-width: 56.25em) {
   :host {
-    font-size: 50%;
-  }
-}
-@media only screen and (min-width: 112.5em) {
-  :host {
-    font-size: 75%;
+    font-size: 85%;
   }
 }
 
@@ -477,7 +472,7 @@ button:disabled, button[disabled] {
   border-bottom: 0.5rem solid var(--theme-next);
   width: 100%;
   top: 1rem;
-  left: -50%;
+  left: -45%;
   z-index: -1;
 }
 .sf-h-stepper li::after {
@@ -486,7 +481,7 @@ button:disabled, button[disabled] {
   border-bottom: 0.5rem solid var(--theme-next);
   width: 100%;
   top: 1rem;
-  left: 50%;
+  left: 45%;
   z-index: -1;
 }
 .sf-h-stepper li.sf-h-done .sf-step-number {
@@ -500,7 +495,7 @@ button:disabled, button[disabled] {
   border-bottom: 0.5rem solid var(--theme-done);
   width: 100%;
   top: 1rem;
-  left: 50%;
+  left: 45%;
   z-index: 0;
 }
 .sf-h-stepper li:first-child::before {
@@ -533,7 +528,7 @@ li.sf-v-done .sf-step-number {
   width: 0.5rem;
   height: calc(100% - 4rem);
   top: 1rem;
-  left: 0.8rem;
+  left: 1.2rem;
   z-index: -2;
   background-color: var(--theme-next);
 }
@@ -547,7 +542,7 @@ li.sf-v-done .sf-step-number {
   width: 0.5rem;
   height: 5rem;
   margin-top: 0.6rem;
-  left: 0.8rem;
+  left: 1.2rem;
   z-index: -1;
   background-color: var(--theme-done);
 }
@@ -559,8 +554,8 @@ li.sf-v-done .sf-step-number {
 }
 
 .sf-step-number {
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 2.9rem;
+  height: 2.9rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -610,23 +605,31 @@ li.sf-v-done .sf-step-number {
 }
 
 .sf-step-right-ele {
-  display: inline-block;
-  margin-right: 1rem;
-  width: 2.25rem;
-  height: 2.25rem;
+  display: table-cell;
+  width: 2.9rem;
+  height: 2.9rem;
 }
 
 .sf-step-left-ele {
-  display: inline-block;
+  display: table-cell;
+  padding-left: 0.5rem;
+  vertical-align: middle;
+}
+.sf-step-left-ele .sf-step-label {
+  display: table-cell;
 }
 
 .sf-h-step {
   background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .sf-v-step {
   display: inline-block;
-  line-height: 3rem;
+  line-height: 2.3rem;
 }
 
 .sf-stepper-container {
