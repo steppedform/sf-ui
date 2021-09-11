@@ -176,7 +176,7 @@ Listenting lic from any other wc
       this.inputBackground = {
         backgroundImage: `url(${this.cardImage})`,
         backgroundPosition: 'right 5px bottom 5px',
-        backgroundSize: '45px',
+        backgroundSize: '35px',
         backgroundRepeat: 'no-repeat',
       };
     }

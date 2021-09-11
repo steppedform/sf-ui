@@ -262,9 +262,9 @@ button:disabled, button[disabled] {
   font-size: 1.2em;
   font-family: inherit;
   color: var(--theme-text);
-  padding: 0.5rem 1em;
+  padding: 0.5em 1em;
   border-radius: 2px;
-  background-color: var(--theme-shadow);
+  background-color: var(--theme-contrast);
   border: none;
   border-bottom: 2px solid var(--theme-text);
   width: 100%;
@@ -279,7 +279,7 @@ button:disabled, button[disabled] {
 }
 .sf-form__input:focus {
   outline: none;
-  box-shadow: 0 1rem 2rem rgba(var(--theme-shadow), 0.1);
+  box-shadow: 0 1em 2em rgba(var(--theme-shadow), 0.1);
   border-bottom: 2px solid var(--theme-done);
 }
 .sf-form__input:focus:required:invalid {
@@ -300,7 +300,7 @@ button:disabled, button[disabled] {
 .sf-form__input:placeholder-shown + .sf-form__label {
   opacity: 0;
   visibility: hidden;
-  transform: translateY(2rem);
+  transform: translateY(2em);
   background-color: var(--theme-contrast);
 }
 .sf-form__radio-group {
@@ -376,6 +376,6 @@ button:disabled, button[disabled] {
 }
 
 .sf-main-title {
-  padding: 0.25rem 0;
+  padding: 0.25em 0;
   font-size: 1.2em;
 }
