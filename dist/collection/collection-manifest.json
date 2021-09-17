@@ -9,6 +9,7 @@
     "./components/sf-full-address/sf-full-address.js",
     "./components/sf-full-credit-card/sf-full-credit-card.js",
     "./components/sf-input/sf-input.js",
+    "./components/sf-input-custom/sf-input-custom.js",
     "./components/sf-main-title/sf-main-title.js",
     "./components/sf-radio-group/sf-radio-group.js",
     "./components/sf-select-menu/sf-select-menu.js",
