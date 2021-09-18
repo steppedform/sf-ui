@@ -68,12 +68,6 @@ export namespace Components {
         "unionImg": string;
         "visaImg": string;
     }
-    interface SfInputCustom {
-        "sfDisabled": boolean;
-        "sfPlaceholder": string;
-        "sfRequired": boolean;
-        "sfType": string;
-    }
     interface SfMainTitle {
     }
     interface SfRadioGroup {
@@ -167,12 +161,6 @@ declare global {
         prototype: HTMLSfInputElement;
         new (): HTMLSfInputElement;
     };
-    interface HTMLSfInputCustomElement extends Components.SfInputCustom, HTMLStencilElement {
-    }
-    var HTMLSfInputCustomElement: {
-        prototype: HTMLSfInputCustomElement;
-        new (): HTMLSfInputCustomElement;
-    };
     interface HTMLSfMainTitleElement extends Components.SfMainTitle, HTMLStencilElement {
     }
     var HTMLSfMainTitleElement: {
@@ -219,7 +207,6 @@ declare global {
         "sf-full-address": HTMLSfFullAddressElement;
         "sf-full-credit-card": HTMLSfFullCreditCardElement;
         "sf-input": HTMLSfInputElement;
-        "sf-input-custom": HTMLSfInputCustomElement;
         "sf-main-title": HTMLSfMainTitleElement;
         "sf-radio-group": HTMLSfRadioGroupElement;
         "sf-select-menu": HTMLSfSelectMenuElement;
@@ -295,12 +282,6 @@ declare namespace LocalJSX {
         "unionImg"?: string;
         "visaImg"?: string;
     }
-    interface SfInputCustom {
-        "sfDisabled"?: boolean;
-        "sfPlaceholder"?: string;
-        "sfRequired"?: boolean;
-        "sfType"?: string;
-    }
     interface SfMainTitle {
     }
     interface SfRadioGroup {
@@ -351,7 +332,6 @@ declare namespace LocalJSX {
         "sf-full-address": SfFullAddress;
         "sf-full-credit-card": SfFullCreditCard;
         "sf-input": SfInput;
-        "sf-input-custom": SfInputCustom;
         "sf-main-title": SfMainTitle;
         "sf-radio-group": SfRadioGroup;
         "sf-select-menu": SfSelectMenu;
@@ -373,7 +353,6 @@ declare module "@stencil/core" {
             "sf-full-address": LocalJSX.SfFullAddress & JSXBase.HTMLAttributes<HTMLSfFullAddressElement>;
             "sf-full-credit-card": LocalJSX.SfFullCreditCard & JSXBase.HTMLAttributes<HTMLSfFullCreditCardElement>;
             "sf-input": LocalJSX.SfInput & JSXBase.HTMLAttributes<HTMLSfInputElement>;
-            "sf-input-custom": LocalJSX.SfInputCustom & JSXBase.HTMLAttributes<HTMLSfInputCustomElement>;
             "sf-main-title": LocalJSX.SfMainTitle & JSXBase.HTMLAttributes<HTMLSfMainTitleElement>;
             "sf-radio-group": LocalJSX.SfRadioGroup & JSXBase.HTMLAttributes<HTMLSfRadioGroupElement>;
             "sf-select-menu": LocalJSX.SfSelectMenu & JSXBase.HTMLAttributes<HTMLSfSelectMenuElement>;
