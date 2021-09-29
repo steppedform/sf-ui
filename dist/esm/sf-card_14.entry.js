@@ -238,7 +238,7 @@ class licenseService {
           return false;
         }
       }
-      else if (lic == 'p' || lic == 'te' || lic == 'e') {
+      else if (lic == 'i' || lic == 'te' || lic == 'e') {
         const licKey = await this.extractExpiry(dataRef);
         if (!licKey || licKey > 13) {
           this.outputInvalidLicenseKey();
@@ -286,7 +286,7 @@ class licenseService {
         let whatType = await this.licCheck('282429536481');
         let resType = whatType(licData);
         // Type list
-        const lt = ['t', 'p', 'te', 'e'];
+        const lt = ['t', 'i', 'te', 'e'];
         return await this.licMsg(lt, resType);
       }
       else {
