@@ -227,7 +227,7 @@ class licenseService {
       const licDate = dataRef.substring(dataRef.lastIndexOf('_') + 1, dataRef.length);
       const expDate = new Date(licDate);
       const today = new Date();
-      if (lic == 't') {
+      if (lic == 'tea') {
         if (licDate && licDate.length >= 8) {
           if (expDate < today) {
             this.outputExpiredTrialKey(licDate);
@@ -242,7 +242,7 @@ class licenseService {
           return false;
         }
       }
-      else if (lic == 'i' || lic == 'te' || lic == 'e') {
+      else if (lic == 'ind' || lic == 'tea' || lic == 'ent') {
         const licKey = await this.extractExpiry(dataRef);
         if (!licKey || licKey > 13) {
           this.outputInvalidLicenseKey();
@@ -290,7 +290,7 @@ class licenseService {
         let whatType = await this.licCheck('282429536481');
         let resType = whatType(licData);
         // Type list
-        const lt = ['t', 'i', 'te', 'e'];
+        const lt = ['tea', 'ind', 'tea', 'ent'];
         return await this.licMsg(lt, resType);
       }
       else {
