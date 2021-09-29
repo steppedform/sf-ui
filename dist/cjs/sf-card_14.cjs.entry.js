@@ -227,7 +227,7 @@ class licenseService {
       const licDate = dataRef.substring(dataRef.lastIndexOf('_') + 1, dataRef.length);
       const expDate = new Date(licDate);
       const today = new Date();
-      if (lic == 'tea') {
+      if (lic == 'demo') {
         if (licDate && licDate.length >= 8) {
           if (expDate < today) {
             this.outputExpiredTrialKey(licDate);
@@ -290,7 +290,7 @@ class licenseService {
         let whatType = await this.licCheck('282429536481');
         let resType = whatType(licData);
         // Type list
-        const lt = ['tea', 'ind', 'tea', 'ent'];
+        const lt = ['demo', 'ind', 'tea', 'ent'];
         return await this.licMsg(lt, resType);
       }
       else {
