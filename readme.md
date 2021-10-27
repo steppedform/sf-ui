@@ -37,14 +37,14 @@ To switch theme define `data-theme` in `body` (current options are `dark` and `l
             }
         ],
         code: `
-<sf-card dist="2">
-    <sf-card-col slot="col-1">
-    <sf-card-image></sf-card-image>
-    </sf-card-col>
-    <sf-card-col slot="col-2">
-    <div class="product-price" id="prod-price-001">US$ 118.00</div>
-    </sf-card-col>
-</sf-card>
+        <sf-card dist="2">
+            <sf-card-col slot="col-1">
+            <sf-card-image></sf-card-image>
+            </sf-card-col>
+            <sf-card-col slot="col-2">
+            <div class="product-price" id="prod-price-001">US$ 118.00</div>
+            </sf-card-col>
+        </sf-card>
         `
     },
     {
@@ -53,9 +53,9 @@ To switch theme define `data-theme` in `body` (current options are `dark` and `l
         title: 'Cards Columns',
         url: '#docs/v1/sf-card-col',
         code: `
-<sf-card-col slot="col-2">
-    <div class="product-price" id="prod-price-001">US$ 118.00</div>
-</sf-card-col>
+        <sf-card-col slot="col-2">
+            <div class="product-price" id="prod-price-001">US$ 118.00</div>
+        </sf-card-col>
         `
     },
     {
@@ -64,9 +64,9 @@ To switch theme define `data-theme` in `body` (current options are `dark` and `l
         title: 'Card Content',
         url: '#docs/v1/sf-card-content',
         code: `
-<sf-card-content>
-    <sf-ratio-group id="shipping-dates-001"></sf-ratio-group>
-</sf-card-content>
+        <sf-card-content>
+            <sf-ratio-group id="shipping-dates-001"></sf-ratio-group>
+        </sf-card-content>
         `
     },
     {
@@ -82,8 +82,8 @@ To switch theme define `data-theme` in `body` (current options are `dark` and `l
             }
         ],
         code: `
-const imgName = 'logo.png';
-<sf-card-image image="imgName"></sf-card-image>
+        const imgName = 'logo.png';
+        <sf-card-image image="imgName"></sf-card-image>
         `
     },
     {
@@ -92,7 +92,7 @@ const imgName = 'logo.png';
         title: 'Card Title',
         url: '#docs/v1/sf-card-title',
         code: `
-<sf-card-title>Shipping Date</sf-card-title>
+        <sf-card-title>Shipping Date</sf-card-title>
         `
     },
     {
@@ -101,9 +101,9 @@ const imgName = 'logo.png';
         title: 'Form',
         url: '#docs/v1/sf-form',
         code: `
-<sf-form>
-...
-<sf-form>
+        <sf-form>
+        ...
+        <sf-form>
         `
     },
     {
@@ -124,7 +124,7 @@ const imgName = 'logo.png';
             }
         ],
         code: `
-<sf-full-address show-buttom="true" id-suffix="001" id="ad-02"></sf-full-address>
+        <sf-full-address show-buttom="true" id-suffix="001" id="ad-02"></sf-full-address>
         `
     },
     {
@@ -150,23 +150,23 @@ const imgName = 'logo.png';
             }
         ],
         code: `
-const paymentOptions = [
-{
-    "radioLabel": "Same as shipping",
-    "radioName": "sameAddress",
-    "radioModel": "paymentAddress"
-},
-{
-    "radioLabel": "Different Address",
-    "radioName": "differentAddress",
-    "radioModel": "paymentAddress"
-},
-];
+        const paymentOptions = [
+        {
+            "radioLabel": "Same as shipping",
+            "radioName": "sameAddress",
+            "radioModel": "paymentAddress"
+        },
+        {
+            "radioLabel": "Different Address",
+            "radioName": "differentAddress",
+            "radioModel": "paymentAddress"
+        },
+        ];
 
-<sf-full-credit-card show-buttom="true" id-suffix="001" id="cc-01"></sf-full-credit-card>
+        <sf-full-credit-card show-buttom="true" id-suffix="001" id="cc-01"></sf-full-credit-card>
 
-const paymentConfig = document.getElementById('cc-01');
-paymentConfig.paymentAddressConfig = paymentOptions;
+        const paymentConfig = document.getElementById('cc-01');
+        paymentConfig.paymentAddressConfig = paymentOptions;
         `
     },
     {
@@ -212,19 +212,19 @@ paymentConfig.paymentAddressConfig = paymentOptions;
             }
         ],
         code: `
-const state = [
-    {
-        "id": 3901,
-        "name": "Badakhshan",
-        "country_id": 1,
-        "country_code": "AF",
-        "state_code": "BDS",
-        "latitude": "36.73477250",
-        "longitude": "70.81199530"
-    },
-];
+        const state = [
+            {
+                "id": 3901,
+                "name": "Badakhshan",
+                "country_id": 1,
+                "country_code": "AF",
+                "state_code": "BDS",
+                "latitude": "36.73477250",
+                "longitude": "70.81199530"
+            },
+        ];
 
-<sf-input sf-label="State/Province" sf-data="{this.state}" sfId="A01" sf-required="true"></sf-input>
+        <sf-input sf-label="State/Province" sf-data="{this.state}" sfId="A01" sf-required="true"></sf-input>
         `
     },
     {
@@ -233,7 +233,7 @@ const state = [
         title: 'Main Title',
         url: '#docs/v1/sf-main-title',
         code: `
-<sf-main-title>Billing Address</sf-main-title>
+        <sf-main-title>Billing Address</sf-main-title>
         `
     },
     {
@@ -249,20 +249,20 @@ const state = [
             },
         ],
         code: `
-const objectData = [
-    {
-        "radioLabel": "Same as shipping",
-        "radioName": "sameAddress",
-        "radioModel": "paymentAddress"
-    },
-    {
-        "radioLabel": "Different Address",
-        "radioName": "differentAddress",
-        "radioModel": "paymentAddress"
-    },
-];
+        const objectData = [
+            {
+                "radioLabel": "Same as shipping",
+                "radioName": "sameAddress",
+                "radioModel": "paymentAddress"
+            },
+            {
+                "radioLabel": "Different Address",
+                "radioName": "differentAddress",
+                "radioModel": "paymentAddress"
+            },
+        ];
 
-<sf-ratio-group radioGroupData={this.objectData}></sf-ratio-group>
+        <sf-ratio-group radioGroupData={this.objectData}></sf-ratio-group>
         `
     },
     {
@@ -278,17 +278,17 @@ const objectData = [
             },
         ],
         code: `
-const productPriceOptions = [
-{
-    "optionLabel": "1",
-    "optionValue": "1",
-}
-];
+        const productPriceOptions = [
+        {
+            "optionLabel": "1",
+            "optionValue": "1",
+        }
+        ];
 
-<sf-select-menu id="prod-quan-001"></sf-select-menu>
+        <sf-select-menu id="prod-quan-001"></sf-select-menu>
 
-const productMenu = document.getElementById('prod-quan-001');
-productMenu.selectMenuData = productPriceOptions;            
+        const productMenu = document.getElementById('prod-quan-001');
+        productMenu.selectMenuData = productPriceOptions;            
         `
     },
     {
@@ -305,32 +305,32 @@ productMenu.selectMenuData = productPriceOptions;
             {
                 label: 'stepperAlign',
                 type: 'String',
-                description: 'Optional. Modify stepper alignment. Ex: \'vertical\' , \'horizontal\'.'
+                description: 'Optional. Modify stepper alignment. Ex: `vertical` , `horizontal`.'
             }
         ],
         code: `
-const steps =[
-    {
-        "stepNumber": "1",
-        "stepLabel": "Place Order",
-        "activeStep": true,
-        "stepHidden": false
-    },
-    {
-        "stepNumber": "2",
-        "stepLabel": "Address",
-        "activeStep": false,
-        "stepHidden": false
-    },
-]
+        const steps =[
+            {
+                "stepNumber": "1",
+                "stepLabel": "Place Order",
+                "activeStep": true,
+                "stepHidden": false
+            },
+            {
+                "stepNumber": "2",
+                "stepLabel": "Address",
+                "activeStep": false,
+                "stepHidden": false
+            },
+        ]
 
-<sf-stepper id="h-stepper-001" stepper-align="horizontal">
-    <sf-step>...</sf-step>
-    <sf-step>...</sf-step>
-</sf-stepper>      
+        <sf-stepper id="h-stepper-001" stepper-align="horizontal">
+            <sf-step>...</sf-step>
+            <sf-step>...</sf-step>
+        </sf-stepper>      
 
-const verticalStepper = document.getElementById('v-stepper-001');
-verticalStepper.stepsData = steps;
+        const verticalStepper = document.getElementById('v-stepper-001');
+        verticalStepper.stepsData = steps;
         `
     },
     {
@@ -356,7 +356,7 @@ verticalStepper.stepsData = steps;
             }
         ],
         code: `
-<sf-submit-button id-suffix="003" btn-style="primary">Continue</sf-submit-button>
+        <sf-submit-button id-suffix="003" btn-style="primary">Continue</sf-submit-button>
         `
 }
 ```
