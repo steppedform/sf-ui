@@ -20,10 +20,9 @@ To switch theme define `data-theme` in `body` (current options are `dark` and `l
 
 ```bash
 {
-        index: 'sf-card',
-        description: 'Containers that are used for content in steps.',
+        tag: 'sf-card',
         title: 'Card',
-        url: '#docs/v1/sf-card',
+        description: 'Containers that are used for content in steps.',
         options: [
             {
                 label: 'dist',
@@ -36,7 +35,7 @@ To switch theme define `data-theme` in `body` (current options are `dark` and `l
                 description: 'Optional. Centers the element in the card.'
             }
         ],
-        code: `
+        code-example: `
         <sf-card dist="2">
             <sf-card-col slot="col-1">
             <sf-card-image></sf-card-image>
@@ -48,32 +47,29 @@ To switch theme define `data-theme` in `body` (current options are `dark` and `l
         `
     },
     {
-        index: 'sf-card-col',
-        description: 'Containers that are used to sub-divide cards.',
+        tag: 'sf-card-col',
         title: 'Cards Columns',
-        url: '#docs/v1/sf-card-col',
-        code: `
+        description: 'Containers that are used to sub-divide cards.',
+        code-example: `
         <sf-card-col slot="col-2">
             <div class="product-price" id="prod-price-001">US$ 118.00</div>
         </sf-card-col>
         `
     },
     {
-        index: 'sf-card-content',
-        description: 'Containers used for content inside card columns.',
+        tag: 'sf-card-content',
         title: 'Card Content',
-        url: '#docs/v1/sf-card-content',
-        code: `
+        description: 'Containers used for content inside card columns.',
+        code-example: `
         <sf-card-content>
             <sf-ratio-group id="shipping-dates-001"></sf-ratio-group>
         </sf-card-content>
         `
     },
     {
-        index: 'sf-card-image',
-        description: 'Containers to retain images inside card content.',
+        tag: 'sf-card-image',
         title: 'Card Image',
-        url: '#docs/v1/sf-card-image',
+        description: 'Containers to retain images inside card content.',
         options: [
             {
                 label: 'image',
@@ -81,36 +77,33 @@ To switch theme define `data-theme` in `body` (current options are `dark` and `l
                 description: 'Required. Image name or url to be used.'
             }
         ],
-        code: `
+        code-example: `
         const imgName = 'logo.png';
         <sf-card-image image="imgName"></sf-card-image>
         `
     },
     {
-        index: 'sf-card-title',
-        description: 'Containers for main titles in cards.',
+        tag: 'sf-card-title',
         title: 'Card Title',
-        url: '#docs/v1/sf-card-title',
-        code: `
+        description: 'Containers for main titles in cards.',
+        code-example: `
         <sf-card-title>Shipping Date</sf-card-title>
         `
     },
     {
-        index: 'sf-form',
-        description: 'Containers to define forms.',
+        tag: 'sf-form',
         title: 'Form',
-        url: '#docs/v1/sf-form',
-        code: `
+        description: 'Containers to define forms.',
+        code-example: `
         <sf-form>
         ...
         <sf-form>
         `
     },
     {
-        index: 'sf-full-address',
-        description: 'Contains Street (1 and 2), City, State, Zip, Country',
+        tag: 'sf-full-address',
         title: 'Full Addresss',
-        url: '#docs/v1/sf-full-address',
+        description: 'Contains Street (1 and 2), City, State, Zip, Country',
         options: [
             {
                 label: 'showButton',
@@ -123,15 +116,14 @@ To switch theme define `data-theme` in `body` (current options are `dark` and `l
                 description: 'Optional. Allows adding a suffix to elements id.'
             }
         ],
-        code: `
+        code-example: `
         <sf-full-address show-buttom="true" id-suffix="001" id="ad-02"></sf-full-address>
         `
     },
     {
-        index: 'sf-full-credit-card',
-        description: 'Contains card number, card date, CVC and card holer.',
+        tag: 'sf-full-credit-card',
         title: 'Full Credit Card',
-        url: '#docs/v1/sf-full-credit-card',
+        description: 'Contains card number, card date, CVC and card holer.',
         options: [
             {
                 label: 'paymentAddressConfig',
@@ -149,7 +141,7 @@ To switch theme define `data-theme` in `body` (current options are `dark` and `l
                 description: 'Optional. Allows adding a suffix to elements id.'
             }
         ],
-        code: `
+        code-example: `
         const paymentOptions = [
         {
             "radioLabel": "Same as shipping",
@@ -170,10 +162,9 @@ To switch theme define `data-theme` in `body` (current options are `dark` and `l
         `
     },
     {
-        index: 'sf-input',
-        description: 'Besides common type (text, password, email) allows zipcode, card CVC, card date and card number.',
+        tag: 'sf-input',
         title: 'Input',
-        url: '#docs/v1/sf-input',
+        description: 'Besides common type (text, password, email) allows zipcode, card CVC, card date and card number.',
         options: [
             {
                 label: 'sfLabel',
@@ -211,7 +202,7 @@ To switch theme define `data-theme` in `body` (current options are `dark` and `l
                 description: 'Optional. Error message for required sf-inputs.'
             }
         ],
-        code: `
+        code-example: `
         const state = [
             {
                 "id": 3901,
@@ -228,19 +219,17 @@ To switch theme define `data-theme` in `body` (current options are `dark` and `l
         `
     },
     {
-        index: 'sf-main-title',
-        description: 'Wrappers for main titles.',
+        tag: 'sf-main-title',
         title: 'Main Title',
-        url: '#docs/v1/sf-main-title',
-        code: `
+        description: 'Wrappers for main titles.',
+        code-example: `
         <sf-main-title>Billing Address</sf-main-title>
         `
     },
     {
-        index: 'sf-ratio-group',
-        description: 'Creates modern ratio buttons.',
+        tag: 'sf-ratio-group',
         title: 'Ratio Buttons',
-        url: '#docs/v1/sf-ratio-group',
+        description: 'Creates modern ratio buttons.',
         options: [
             {
                 label: 'radioGroupData',
@@ -248,7 +237,7 @@ To switch theme define `data-theme` in `body` (current options are `dark` and `l
                 description: 'Required. Inner Object uses radioLabel, radioName and radioModel.'
             },
         ],
-        code: `
+        code-example: `
         const objectData = [
             {
                 "radioLabel": "Same as shipping",
@@ -266,10 +255,9 @@ To switch theme define `data-theme` in `body` (current options are `dark` and `l
         `
     },
     {
-        index: 'sf-select-menu',
-        description: 'Similar to html select menus with options',
+        tag: 'sf-select-menu',
         title: 'Select Menu',
-        url: '#docs/v1/sf-select-menu',
+        description: 'Similar to html select menus with options',
         options: [
             {
                 label: 'selectMenuData',
@@ -277,7 +265,7 @@ To switch theme define `data-theme` in `body` (current options are `dark` and `l
                 description: 'Required. Inner Object uses optionLabel and optionValue.'
             },
         ],
-        code: `
+        code-example: `
         const productPriceOptions = [
         {
             "optionLabel": "1",
@@ -292,10 +280,9 @@ To switch theme define `data-theme` in `body` (current options are `dark` and `l
         `
     },
     {
-        index: 'sf-stepper',
-        description: 'Powerful wrapper to generate multiple steps easily.',
+        tag: 'sf-stepper',
         title: 'Stepper',
-        url: '#docs/v1/sf-stepper',
+        description: 'Powerful wrapper to generate multiple steps easily.',
         options: [
             {
                 label: 'stepsData',
@@ -308,7 +295,7 @@ To switch theme define `data-theme` in `body` (current options are `dark` and `l
                 description: 'Optional. Modify stepper alignment. Ex: `vertical` , `horizontal`.'
             }
         ],
-        code: `
+        code-example: `
         const steps =[
             {
                 "stepNumber": "1",
@@ -334,15 +321,14 @@ To switch theme define `data-theme` in `body` (current options are `dark` and `l
         `
     },
     {
-        index: 'sf-submit-button',
-        description: 'Responsive submit button',
+        tag: 'sf-submit-button',
         title: 'Submit Button',
-        url: '#docs/v1/sf-submit-button',
+        description: 'Responsive submit button',
         options: [
             {
                 label: 'btnStyle',
                 type: 'String',
-                description: 'Optional. Can be \'primary\' , otherwise \'secondary\'.'
+                description: 'Optional. Can be `primary` , otherwise `secondary`.'
             },
             {
                 label: 'idSuffix',
@@ -355,7 +341,7 @@ To switch theme define `data-theme` in `body` (current options are `dark` and `l
                 description: 'Optional. Disable button if necessary.'
             }
         ],
-        code: `
+        code-example: `
         <sf-submit-button id-suffix="003" btn-style="primary">Continue</sf-submit-button>
         `
 }
